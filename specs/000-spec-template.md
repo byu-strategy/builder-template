@@ -1,15 +1,17 @@
-# Spec 000: [Feature name]
+# Spec 000: [What you are making]
 
-**Status:** Draft | Building | Shipped
+**Status:** Draft | In progress | Shipped
 **Date:** YYYY-MM-DD
 
 ## Problem
 
-What user problem does this solve? Cite evidence (link an interview note if you have one).
+What problem does this solve, and for whom? Cite evidence (link an interview note if you have
+one).
 
-## What we're building
+## What we're making
 
-Plain-language description of the feature. Small enough to ship this week.
+Plain-language description: a feature, a pricing model, a campaign, a workflow. Small enough to
+ship this week.
 
 ## Out of scope
 
@@ -17,6 +19,7 @@ What this deliberately does NOT include (the discipline lives here).
 
 ## Definition of done
 
-- [ ] [User-visible behavior that proves it works]
-- [ ] Deployed to live URL
+- [ ] [Observable result that proves it works]
+- [ ] Shipped: someone other than you can reach it, use it, or see it (a deployed feature, a
+      published page, a model your team uses)
 - [ ] [How you'll know if anyone uses it: event, metric, ask]
