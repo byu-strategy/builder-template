@@ -5,8 +5,9 @@ description: Start a sprint by defining its goal. Interviews the builder about w
 
 # Sprint Plan
 
-Write the plan file that opens a two-week sprint. The commit timestamp is the record, so this
-runs on day one and the file gets committed the same day.
+Write the plan file that opens a two-week sprint. It runs at the start of the sprint; the plan
+is due on Canvas by that Wednesday at 11:59 PM and is graded for completion. The builder may
+change it later in the sprint, noting what changed and why.
 
 ## Steps
 
@@ -72,8 +73,8 @@ sprint for someone in their role? Check every item below, not just the first one
   ignores it, point that out.
 
 Raise every problem you found in one message, briefly, each one once. Then accept their
-answers, revised or not. You are not negotiating, and the plan is theirs; its quality is
-graded. If nothing fails, say so in one line and go straight to writing the file.
+answers, revised or not. You are not negotiating, and the plan is theirs. Its quality is not
+graded, but a plan with these problems makes the sprint harder to finish and to review. If nothing fails, say so in one line and go straight to writing the file.
 
 Do not push back on difficulty. It is self-reported and not graded.
 
@@ -95,13 +96,17 @@ Write `sprints/sprint-N-plan.md` exactly in this shape, filled in with their ans
 
 Leave the end-of-sprint fields out. `/sprint-review` adds them later.
 
-### 6. Tell them to commit
+### 6. Tell them to commit and submit
 
-Print the exact command and say the timestamp is what gets graded:
+Print the exact command:
 
 ```bash
 git add sprints/sprint-N-plan.md && git commit -m "Sprint N plan" && git push
 ```
+
+Then tell them to paste the four fields into the Sprint N Plan assignment on Canvas by
+Wednesday, 11:59 PM, and that if the plan changes later they edit this file and add a
+`**Changes:**` line saying what changed and why.
 
 ## What shipped means
 

@@ -26,7 +26,7 @@ a brand new session act like a colleague who already knows what you are working 
   before starting.
 - Meaningful choices get a numbered record in `decisions/`, written when the choice is made,
   including what was rejected and why.
-- Sprint plans and reviews live in `sprints/`. The plan is committed on day one.
+- Sprint plans and reviews live in `sprints/`. The plan is committed and submitted on Canvas by the sprint's first Wednesday, and may change later with a `**Changes:**` note.
 - Never put real names, emails, or phone numbers in this repo. Anonymize.
 
 ## Tools and conventions

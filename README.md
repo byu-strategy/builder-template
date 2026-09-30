@@ -51,7 +51,7 @@ whether a change to a prompt helped or hurt.
 Each sprint:
 
 ```bash
-/sprint-plan     # day one, then commit the plan
+/sprint-plan     # start of the sprint: commit the plan, submit it on Canvas by Wednesday
 # ...do the work...
 /sprint-review   # last day, then commit the report and write your retro
 ```

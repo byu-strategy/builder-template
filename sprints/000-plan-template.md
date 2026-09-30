@@ -1,6 +1,7 @@
 # Sprint N Plan
 
-*Written on day one and committed the same day. `/sprint-plan` fills this in for you.*
+*Written at the start of the sprint. `/sprint-plan` fills this in for you. Commit it, and paste
+the four fields into the Plan assignment on Canvas by Wednesday, 11:59 PM.*
 
 **Goal:** What will be true in two weeks that is not true now?
 
@@ -11,6 +12,8 @@ could check.
 
 **Predicted difficulty:** 1 to 5.
 
+**Changes:** Only if the plan changes during the sprint: the date, what changed, and why.
+
 ---
 
 *Added at the end of the sprint, after reading your review.*
@@ -19,4 +22,5 @@ could check.
 
 **Why it differed:** One sentence.
 
-**Retro:** Did you hit the goal? If not, what happened? What changes next sprint?
+**Retro:** Did you hit the goal? If not, what happened? If the plan changed, why? What changes
+next sprint?
