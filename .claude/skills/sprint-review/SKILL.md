@@ -57,7 +57,11 @@ python3 <skill-dir>/scripts/sprint_scan.py --since <ISO date> --projects <path> 
 ```
 
 You get back per-day activity, session count and duration, the user's own prompts, and tool
-usage counts. Also read the git log for the window.
+usage counts. Also read the git log for the window, in this repo and in every other repo the
+work happened in: the ones listed under **Where the work lives** in the README, and any local
+repo among the confirmed projects. For each, summarize its commits in the window: count, days,
+and messages. Never copy code or file contents from another repo into the report; a company
+repo may be private, and dates, messages, and file names are enough.
 
 ### 5. Work out what happened
 
@@ -85,6 +89,11 @@ Write `sprints/sprint-N-review.md`:
 **Window:** <start> to <end>
 **Sessions reviewed:** N across M projects (Claude Code A, Codex B; X sessions excluded at your request)
 **Not visible to this review:** <what they said they used outside these sessions, or "nothing reported">
+
+## Where the work lives
+
+<each repo with its commit count in the window and whether it is shared with sdmurff; each live
+URL. For a repo that is not shared, a short list of its commits in the window: date and message>
 
 ## When you worked
 

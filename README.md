@@ -22,6 +22,15 @@ Fill this in during Sprint 1 and keep it current. Every sprint is read against i
 If your situation changes, revise this and note what changed. That is normal; a silent
 mismatch between this file and your work is not.
 
+## Where the work lives
+
+Everything someone would need to check what you shipped. List each place on its own line.
+
+- **Repos:** [this repo, and any other repo your work happens in. Share it with `sdmurff` and
+  `nmccaul` if you can. A company repo you cannot share is fine: say so here, and
+  `/sprint-review` will summarize its commits (dates and messages, never code)]
+- **Live:** [the app, page, store listing, or file someone else can open]
+
 ## What is in this repo
 
 | Folder | What lives here |
