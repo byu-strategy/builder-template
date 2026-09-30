@@ -1,6 +1,6 @@
 ---
 name: sprint-review
-description: Close a sprint by reviewing what actually happened. Finds the Claude Code sessions and commits from the sprint window, asks which projects belonged to this sprint, and writes sprints/sprint-N-review.md summarizing when the work happened, where it got stuck, and which builder axis it advanced. Use at the end of every sprint, or when the user says "review my sprint", "close out my sprint", or "/sprint-review".
+description: Close a sprint by reviewing what actually happened. Finds the Claude Code and Codex sessions and commits from the sprint window, asks which projects belonged to this sprint, and writes sprints/sprint-N-review.md summarizing when the work happened, where it got stuck, and which builder axis it advanced. Use at the end of every sprint, or when the user says "review my sprint", "close out my sprint", or "/sprint-review".
 ---
 
 # Sprint Review
@@ -33,16 +33,19 @@ know now rather than at grading. Use the last 14 days as the window and continue
 python3 <skill-dir>/scripts/sprint_scan.py --since <ISO date> --list
 ```
 
-This lists every Claude Code project directory with session activity in the window: the
-decoded working directory, the session count, and first and last activity. It reads filenames
+This lists every project directory with Claude Code or Codex session activity in the window:
+the working directory, the session count by tool, and first and last activity. Building in
+Codex is fine; its sessions are read the same way. It reads filenames
 and timestamps only, not session content.
 
-### 3. Ask which projects belonged to this sprint
+### 3. Ask which projects belonged to this sprint, and what else was used
 
 Show the list. Pre-select any whose path is at or under this repo, and any whose name relates
 to the goal in the plan. Present the rest unselected.
 
-Ask once: which of these were this sprint's work?
+Ask once: which of these were this sprint's work? In the same message, ask what else they used
+this sprint that this scan cannot see (Claude or ChatGPT in a browser or the desktop chat,
+Cursor, another computer, meetings, research outside any tool).
 
 **Read nothing until they answer.** If they exclude a directory, do not ask why and do not
 name it in the report. Record only the count of excluded sessions.
@@ -80,7 +83,8 @@ Write `sprints/sprint-N-review.md`:
 # Sprint N Review
 
 **Window:** <start> to <end>
-**Sessions reviewed:** N across M projects (X sessions excluded at your request)
+**Sessions reviewed:** N across M projects (Claude Code A, Codex B; X sessions excluded at your request)
+**Not visible to this review:** <what they said they used outside these sessions, or "nothing reported">
 
 ## When you worked
 
