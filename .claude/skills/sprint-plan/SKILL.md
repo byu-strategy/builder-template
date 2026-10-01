@@ -35,7 +35,7 @@ create it and go to step 2.
 
 Students play different roles. Some build their own product end to end. Some are a PM,
 engineer, or designer on a team. Some work on go-to-market, pricing, or something else. Not
-everyone ships software. Judge the plan against their role, not against a software build.
+everyone writes software. Judge the plan against their role, not against a software build.
 
 Most roles combine several hats. Judge the plan against the hats the README lists, and if a
 goal falls outside all of them, ask whether their role has changed; if it has, they should
@@ -53,7 +53,7 @@ vague to write down. Save judgments about size and fit for the review in step 4.
 - **Goal.** What will be true in two weeks that is not true now?
 - **Why this.** Why is this the right next thing for what they are working on?
 - **Done looks like.** How will they know the goal was met? Specific enough that someone else
-  could check, including what shipped means for this work (see the table below).
+  could check, including what the output will be for this work (see the table below).
 - **Predicted difficulty.** 1 to 5 on the scale below.
 
 ### 4. Review the whole plan before you write
@@ -65,9 +65,10 @@ sprint for someone in their role? Check every item below, not just the first one
   specifically will be different.
 - **Unmeasurable.** If "done looks like" cannot be checked by another person, ask what they
   would check.
-- **Shipped is undefined.** If "done looks like" does not say how someone other than them will
-  reach, use, or see the result, ask. Use the table below for their kind of work. If their
-  work is not in the table, ask them to say what shipped means for it.
+- **The output is undefined.** If "done looks like" does not say what will exist at the end and
+  how it can be checked (in the repo, at a link, or shown in the demo), ask. It does not need an
+  audience. Use the table below for their kind of work. If their work is not in the table, ask
+  them to say what the output will be.
 - **Done does not match the goal.** If meeting "done looks like" would not mean the goal was
   met, point out the gap.
 - **Too small.** If it reads like a day or less of work with Claude Code, say so and ask what
@@ -141,21 +142,22 @@ change in their words and keep the plan coherent.
 Never change a field they did not ask to change. Never write the reason for them: if they cannot
 say why, ask once, then record what they said.
 
-## What shipped means
+## What output means
 
-Not every sprint produces code. What counts is that the thing is real and someone other than
-the builder can reach it, use it, or see it.
+Output is whatever the sprint produced, on any of the six axes; code is one kind among many. It
+counts when it is real, finished for this sprint, and checkable by the course. It does not have
+to be public, launched, or used by anyone.
 
-| If the sprint is | Shipped means |
+| If the sprint is | Output means |
 |---|---|
-| A product feature | Deployed and working in the live app |
-| Frontend or design work | The new interface is live, not a mockup |
-| A landing page or campaign | The page is published at a URL |
-| Pricing or financial modeling | The model exists, runs on real numbers, and the team can use it |
-| Marketing or sales copy | The copy is published or in use, not sitting in a doc |
-| An automation or workflow | It runs, and they can show it running |
-| Research or discovery | The findings are written up in the repo and someone acted on them |
-| Analytics or measurement | The tracking is live and returning real data |
+| A product feature | It works, in the repo or deployed, and the demo shows it working |
+| Frontend or design work | The interface or the designs exist, not just a description |
+| A landing page or campaign | The page or campaign is built, published or ready to publish |
+| Pricing or financial modeling | The model exists and runs on real numbers |
+| Marketing or sales copy | The copy is written and finished, not an outline |
+| An automation or workflow | It runs, and the demo shows it running |
+| Research or discovery | The findings are written up, with what they concluded |
+| Analytics or measurement | The tracking is set up and returning real data |
 
 ## The difficulty scale
 

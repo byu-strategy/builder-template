@@ -24,7 +24,7 @@ mismatch between this file and your work is not.
 
 ## Where the work lives
 
-Everything someone would need to check what you shipped. List each place on its own line.
+Everything someone would need to check your output. List each place on its own line.
 
 - **Repos:** [this repo, and any other repo your work happens in. Share it with `sdmurff` if you
   can. A company repo you cannot share is fine: say so here, and
@@ -44,7 +44,7 @@ Everything someone would need to check what you shipped. List each place on its 
 | `metrics/` | What you measure and what it says |
 | `decisions/` | Numbered records of what you decided and why |
 
-Not everyone in this course ships software. An interview, a pricing model, a landing page
+Not everyone in this course writes software. An interview, a pricing model, a landing page
 draft, and a usability finding are all artifacts, and they get committed like anything else.
 Use the folders that fit your role and ignore the rest.
 

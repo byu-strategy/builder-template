@@ -35,8 +35,8 @@ Fill in what applies to your work. A pricing or go-to-market role may have tools
 formats instead of a code stack.
 
 - **Stack or tools:** [fill in]
-- **How work ships:** [how finished work reaches the people who use it: a deploy, a published
-  page, a model shared with the team]
+- **Where output lives:** [where finished work ends up: this repo, another repo, a deploy, a
+  shared doc, or only the demo]
 - **Testing and style:** [fill in as they emerge]
 
 ## Working with me
