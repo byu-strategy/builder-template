@@ -105,9 +105,10 @@ Print the exact command:
 git add sprints/sprint-N-plan.md && git commit -m "Sprint N plan" && git push
 ```
 
-Then tell them to paste the four fields into the Sprint N Plan assignment on Canvas by
-Wednesday, 11:59 PM, and that if the plan changes later they edit this file and add a
-`**Changes:**` line saying what changed and why.
+Then tell them to paste the file's GitHub link into the Sprint N Plan assignment on Canvas by
+Wednesday, 11:59 PM (open `sprints/sprint-N-plan.md` on github.com and copy the URL), and that if
+the plan changes later they edit this file and add a `**Changes:**` line saying what changed and
+why. They do not resubmit: the link always shows the current file.
 
 ## What shipped means
 

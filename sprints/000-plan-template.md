@@ -1,7 +1,7 @@
 # Sprint N Plan
 
-*Written at the start of the sprint. `/sprint-plan` fills this in for you. Commit it, and paste
-the four fields into the Plan assignment on Canvas by Wednesday, 11:59 PM.*
+*Written at the start of the sprint. `/sprint-plan` fills this in for you. Commit and push it,
+then paste its GitHub link into the Plan assignment on Canvas by Wednesday, 11:59 PM.*
 
 **Goal:** What will be true in two weeks that is not true now?
 
