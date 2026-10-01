@@ -1,6 +1,6 @@
 ---
 name: sprint-review
-description: Close a sprint by reviewing what actually happened. Finds the Claude Code and Codex sessions and commits from the sprint window, asks which projects belonged to this sprint, and writes sprints/sprint-N-review.md summarizing when the work happened, where it got stuck, and which builder axis it advanced. Use at the end of every sprint, or when the user says "review my sprint", "close out my sprint", or "/sprint-review".
+description: Close a sprint by reviewing what actually happened. Finds the Claude Code and Codex sessions and commits from the sprint window, asks which projects belonged to this sprint, and writes sprints/sprint-N-review.md summarizing when the work happened, where it got stuck, and which builder axis it advanced, then asks the builder five retro questions and saves their answers word for word at the bottom. Use at the end of every sprint, or when the user says "review my sprint", "close out my sprint", or "/sprint-review".
 ---
 
 # Sprint Review
@@ -120,33 +120,49 @@ URL. For a repo that is not shared, a short list of its commits in the window: d
 
 ## Your retro
 
-*Written by you, after reading the report above. Answer each prompt.*
+*The builder's own answers, recorded word for word in step 7.*
 
-**Did you hit the goal?** Yes, partly, or no, and one sentence on why.
+**Did you hit the goal?** <their answer>
 
-**What did the report show you?** One or two things from the report above that you didn't expect
-or would not have noticed yourself.
+**What did the report show you?** <their answer>
 
-**If the plan changed, why?** Skip if it didn't.
+**If the plan changed, why?** <their answer>
 
-**Actual difficulty:** 1 to 5, and one sentence on why it differed from the difficulty you
-predicted.
+**Actual difficulty:** <their answer>
 
-**What will you change next sprint?** One specific thing.
+**What will you change next sprint?** <their answer>
 ```
 
-Leave every retro prompt as written, unanswered. The retro is the builder's, not yours.
+Write the report sections now, but leave the **Your retro** section out of the file until step 7.
 
 Facts, not encouragement. No praise, no coaching, no suggestions for next time. The builder
 draws the conclusions in their retro.
 
-### 7. Hand off to the retro
+### 7. Ask the retro questions
 
-Tell them to read the report, then answer the five prompts under **Your retro** at the bottom of
-the same file, in their own words. Do not draft answers for them. The retro is graded on whether
-it answers each prompt and responds to something specific in the report.
+The retro is the builder's response to the report, and it is part of this skill, not a separate
+step. Show them the report, then say: "Five quick questions for your retro. Answer in your own
+words; I'll save them exactly as you write them." Ask one question at a time and wait for each
+answer:
 
-Then commit and push:
+1. **Did you hit the goal?** Yes, partly, or no, and why.
+2. **What did the report show you** that you didn't expect, or wouldn't have noticed yourself?
+3. **If the plan changed, why?** (Skip it if the plan did not change.)
+4. **Actual difficulty, 1 to 5,** and why it differed from the difficulty you predicted.
+5. **What will you change next sprint?** One specific thing.
+
+Rules for the answers:
+
+- Record each answer **word for word**. Do not rephrase, fix grammar, expand, or summarize. The
+  retro is theirs; it is graded on what they say.
+- Never suggest an answer, list options, or hint at what the report "really" shows. If they ask
+  what to say, point them back to the report.
+- If an answer is very short or vague, you may ask once for a specific: "Which part of the
+  report?" Accept whatever they say next.
+- If they decline a question, record "(no answer)".
+
+Then append the **Your retro** section to `sprints/sprint-N-review.md` with their answers, show
+them the finished section, and commit and push:
 
 ```bash
 git add sprints/ && git commit -m "Sprint N review and retro" && git push
@@ -154,6 +170,8 @@ git add sprints/ && git commit -m "Sprint N review and retro" && git push
 
 Finally, remind them to submit the Sprint N Wrap-up on Canvas: the GitHub link to this file and
 their Loom demo link.
+
+If they want to change an answer later, they edit the file and commit again; that is fine.
 
 ## Rules
 
