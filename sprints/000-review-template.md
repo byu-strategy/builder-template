@@ -1,6 +1,6 @@
 # Sprint N Review
 
-*Written by `/sprint-review` on or before the last day of the sprint: first the report, then your answers to
+*Written by `/sprint-review` on or before the Monday the sprint ends: first the report, then your answers to
 its five retro questions at the bottom.*
 
 **Window:** [start] to [end]

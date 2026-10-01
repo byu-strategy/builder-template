@@ -62,7 +62,7 @@ Each sprint:
 ```bash
 /sprint-plan     # start of the sprint: commit the plan, submit it on Canvas by Wednesday
 # ...do the work...
-/sprint-review   # on or before the last day: writes the report, asks your five retro questions, then commit
+/sprint-review   # on or before the Monday the sprint ends: writes the report, asks your five retro questions, then commit
 ```
 
 ## Ground rules
