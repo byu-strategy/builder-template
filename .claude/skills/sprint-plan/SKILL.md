@@ -1,6 +1,6 @@
 ---
 name: sprint-plan
-description: Start a sprint by defining its goal. Interviews the builder about what they will accomplish in the next two weeks, pushes back on vague or unambitious goals, and writes sprints/sprint-N-plan.md ready to commit. Use at the start of every sprint, or when the user says "start my sprint", "plan my sprint", or "/sprint-plan".
+description: Start a sprint by defining its goal, or change the current sprint's plan. Interviews the builder about what they will accomplish in the next two weeks, pushes back on vague or unambitious goals, and writes sprints/sprint-N-plan.md; mid-sprint, asks what changed and why, updates the plan with a dated Changes note, and commits it. Use at the start of every sprint, or when the user says "start my sprint", "plan my sprint", "change my plan", "update my sprint plan", or "/sprint-plan".
 ---
 
 # Sprint Plan
@@ -11,10 +11,17 @@ change it later in the sprint, noting what changed and why.
 
 ## Steps
 
-### 1. Work out which sprint this is
+### 1. New plan, or a change to the current one?
 
-Look in `sprints/`. The next number is one higher than the highest `sprint-N-plan.md` present.
-If the directory does not exist, this is Sprint 1; create it.
+Find the highest `sprints/sprint-N-plan.md`. If `sprints/` does not exist, this is Sprint 1;
+create it and go to step 2.
+
+- **`sprints/sprint-N-review.md` exists** (that sprint is closed): this is a new plan for Sprint
+  N+1. Go to step 2.
+- **Sprint N has a plan but no review yet** (the sprint is in progress): ask once, "You have a
+  Sprint N plan from <date of its first commit>. Do you want to change it, or start Sprint N+1?"
+  If they are changing it, go to **Changing a plan** below. If they are starting the next sprint,
+  go to step 2 with N+1.
 
 ### 2. Read the context
 
@@ -36,9 +43,6 @@ update the README.
 
 If the README says their work is not decided yet, a goal of choosing it is a legitimate
 sprint. If the README context is blank, ask what hats they wear on their team before the goal.
-
-If earlier reviews exist, count the axis tags across all of them and tell the user which of
-the six axes they have not touched yet. They need five of six by the end.
 
 ### 3. Interview
 
@@ -109,6 +113,33 @@ Then tell them to paste the file's GitHub link into the Sprint N Plan assignment
 Wednesday, 11:59 PM (open `sprints/sprint-N-plan.md` on github.com and copy the URL), and that if
 the plan changes later they edit this file and add a `**Changes:**` line saying what changed and
 why. They do not resubmit: the link always shows the current file.
+
+## Changing a plan
+
+Plans change once the builder learns something, and that costs nothing. Your job is to record the
+change in their words and keep the plan coherent.
+
+1. Show the current plan. Ask: "What's changing, and why?"
+2. Work out which fields the change touches: Goal, Why this, Done looks like, or Predicted
+   difficulty. Ask about any that are now unclear, one question at a time.
+3. Apply the same checks as a new plan (step 4) to the changed fields only: specific, checkable,
+   matches the goal, sized for the time left in the sprint. Raise problems once, then accept
+   their answer.
+4. Rewrite only the changed fields, in their words. Add a line to `**Changes:**` (create it below
+   Predicted difficulty if it is missing), starting with today's date, for example: "Oct 6:
+   dropped the slide template and added a competitor benchmark, because the licensing research
+   had to come first." Earlier change lines stay; never edit or remove them.
+5. Show the full updated plan and ask, "Save it?"
+6. On yes, commit and push:
+
+   ```bash
+   git add sprints/ && git commit -m "Sprint N plan: <short description of the change>" && git push
+   ```
+
+7. Tell them: "Saved. Nothing to resubmit on Canvas; your plan link shows the current file."
+
+Never change a field they did not ask to change. Never write the reason for them: if they cannot
+say why, ask once, then record what they said.
 
 ## What shipped means
 

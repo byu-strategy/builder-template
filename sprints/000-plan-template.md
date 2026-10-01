@@ -12,5 +12,6 @@ could check.
 
 **Predicted difficulty:** 1 to 5.
 
-**Changes:** Only if the plan changes during the sprint: the date, what changed, and why.
+**Changes:** Only if the plan changes during the sprint: the date, what changed, and why. Run
+`/sprint-plan` again to change the plan; it adds this line for you.
 
