@@ -115,28 +115,45 @@ URL. For a repo that is not shared, a short list of its commits in the window: d
 
 **Goal was:** <from the plan file>
 <Does the work match the goal? Say it plainly either way.>
+
+---
+
+## Your retro
+
+*Written by you, after reading the report above. Answer each prompt.*
+
+**Did you hit the goal?** Yes, partly, or no, and one sentence on why.
+
+**What did the report show you?** One or two things from the report above that you didn't expect
+or would not have noticed yourself.
+
+**If the plan changed, why?** Skip if it didn't.
+
+**Actual difficulty:** 1 to 5, and one sentence on why it differed from the difficulty you
+predicted.
+
+**What will you change next sprint?** One specific thing.
 ```
+
+Leave every retro prompt as written, unanswered. The retro is the builder's, not yours.
 
 Facts, not encouragement. No praise, no coaching, no suggestions for next time. The builder
 draws the conclusions in their retro.
 
 ### 7. Hand off to the retro
 
-Tell them to read the report, then add to the plan file:
+Tell them to read the report, then answer the five prompts under **Your retro** at the bottom of
+the same file, in their own words. Do not draft answers for them. The retro is graded on whether
+it answers each prompt and responds to something specific in the report.
 
-```markdown
-**Actual difficulty:** 1 to 5.
-
-**Why it differed:** One sentence.
-
-**Retro:** Did you hit the goal? If not, what happened? What changes next sprint?
-```
-
-Then commit both:
+Then commit and push:
 
 ```bash
 git add sprints/ && git commit -m "Sprint N review and retro" && git push
 ```
+
+Finally, remind them to submit the Sprint N Wrap-up on Canvas: the GitHub link to this file and
+their Loom demo link.
 
 ## Rules
 

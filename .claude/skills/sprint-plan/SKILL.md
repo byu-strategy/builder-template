@@ -20,8 +20,9 @@ If the directory does not exist, this is Sprint 1; create it.
 
 - `README.md` in the repo root for the context declaration: their role, what they are working
   on, who it is for, and who uses their work.
-- The previous sprint's plan file, if there is one. Pay attention to its **Retro** and to
-  **What changes next sprint**, which is what they said they would do differently.
+- The previous sprint's retro: at the bottom of `sprints/sprint-<N-1>-review.md` (in Sprint 1 it
+  is at the end of that sprint's plan file). Pay attention to **What will you change next
+  sprint?**, which is what they said they would do differently.
 - The previous sprint's review report in `sprints/sprint-<N-1>-review.md`, if present. Note
   which axis it tagged.
 
@@ -94,7 +95,7 @@ Write `sprints/sprint-N-plan.md` exactly in this shape, filled in with their ans
 **Predicted difficulty:** N
 ```
 
-Leave the end-of-sprint fields out. `/sprint-review` adds them later.
+The retro does not go here. `/sprint-review` puts it at the bottom of the review file.
 
 ### 6. Tell them to commit and submit
 
