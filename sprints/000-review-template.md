@@ -22,7 +22,7 @@ its five retro questions at the bottom.*
 
 **Did you hit the goal?**
 
-**What did the report show you?**
+**Hours, your estimate:**
 
 **If the plan changed, why?**
 

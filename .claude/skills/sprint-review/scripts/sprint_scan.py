@@ -480,6 +480,33 @@ def self_emails(repos):
     return found
 
 
+def record_times(path):
+    """Every timestamp in a session file (prompts, replies, tool calls), for counting active time."""
+    try:
+        fh = open(path, "r", errors="replace")
+    except OSError:
+        return
+    with fh:
+        for line in fh:
+            m = re.search(r'"timestamp"\s*:\s*"([^"]+)"', line)
+            if m:
+                try:
+                    yield dt.datetime.fromisoformat(m.group(1).replace("Z", "+00:00"))
+                except ValueError:
+                    continue
+
+
+ACTIVE_GAP = dt.timedelta(minutes=15)
+
+
+def active_hours(files, since):
+    """Hours with session activity: the gaps between consecutive events, across all sessions merged,
+    counting only gaps under 15 minutes. Parallel sessions count once; a long break counts zero."""
+    ts = sorted(t for f in files for t in record_times(f) if t >= since)
+    total = sum(((b - a) for a, b in zip(ts, ts[1:]) if b - a < ACTIVE_GAP), dt.timedelta())
+    return total.total_seconds() / 3600
+
+
 def cmd_analyze(since, wanted):
     want = {w.rstrip("/") for w in wanted}
     picked = [(tool, f) for tool, cwd, f, _m in sessions(since)
@@ -502,7 +529,9 @@ def cmd_analyze(since, wanted):
     by_tool = Counter(tool for tool, _ in picked)
     print(f"SESSIONS: {len(picked)} ({', '.join(f'{k} {v}' for k, v in sorted(by_tool.items()))})")
     print(f"PROMPTS: {len(prompts)}")
-    print(f"DAYS ACTIVE: {len(by_day)}\n")
+    print(f"DAYS ACTIVE: {len(by_day)}")
+    print(f"ACTIVE SESSION TIME: about {active_hours([f for _t, f in picked], since):.1f} hours "
+          f"(time between session events, gaps under 15 minutes, parallel sessions counted once)\n")
 
     print("ACTIVITY BY DAY")
     for day in sorted(by_day):
