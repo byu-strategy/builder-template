@@ -12,7 +12,9 @@ Prints one line: UP TO DATE, or UPDATED: <names>, or SKIPPED: <why>.
 import io, shutil, subprocess, sys, tarfile, tempfile, urllib.request
 from pathlib import Path
 
-URL = "https://codeload.github.com/byu-strategy/builder-template/tar.gz/refs/heads/main"
+TEMPLATE = "https://github.com/byu-strategy/builder-template"
+# Download by commit, not by branch name: the branch tarball is cached for minutes after a push.
+URL = "https://codeload.github.com/byu-strategy/builder-template/tar.gz/{sha}"
 
 
 def git(*args, cwd):
@@ -31,7 +33,8 @@ def main():
         return
     skills = root / ".claude" / "skills"
     try:
-        data = urllib.request.urlopen(URL, timeout=20).read()
+        head = git("ls-remote", TEMPLATE, "refs/heads/main", cwd=root).stdout.split()
+        data = urllib.request.urlopen(URL.format(sha=head[0] if head else "main"), timeout=20).read()
     except Exception as e:
         print(f"SKIPPED: could not reach GitHub ({type(e).__name__}); using the skills you have")
         return
