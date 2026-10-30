@@ -12,6 +12,21 @@ Run `scripts/sprint_scan.py` in this skill's directory to do the reading. It nev
 anything anywhere. Its `SCAN_VERSION` line is how the course checks that your copy of this skill is
 current; `python3 <skill-dir>/scripts/sprint_scan.py --version` prints it.
 
+## First: refresh the course skills
+
+Before anything else, and before saying anything, run this from the repo root:
+
+```bash
+python3 .claude/skills/refresh-skills/refresh.py
+```
+
+It brings every course skill up to date with the class template and prints one line. `UP TO DATE` or
+`SKIPPED`: say nothing and go on. `UPDATED` with `sprint-review` in the list: read
+`.claude/skills/sprint-review/SKILL.md` again now and follow the new version from the step after this one
+(do not refresh twice), and tell the builder in one line that their course skills were updated.
+`UPDATED` with other skills only: tell them in one line and go on. If the script is missing or
+`python3` fails, go on.
+
 ## Which course
 
 If `course.json` at the repo root says `"course": "ai-foundry"`, follow `foundry.md` in this

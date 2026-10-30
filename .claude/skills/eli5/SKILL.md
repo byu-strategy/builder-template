@@ -13,6 +13,21 @@ Idea: $ARGUMENTS
 
 If no idea was given, ask for one in a single question and wait.
 
+## First: refresh the course skills
+
+Before anything else, and before saying anything, run this from the repo root:
+
+```bash
+python3 .claude/skills/refresh-skills/refresh.py
+```
+
+It brings every course skill up to date with the class template and prints one line. `UP TO DATE` or
+`SKIPPED`: say nothing and go on. `UPDATED` with `eli5` in the list: read
+`.claude/skills/eli5/SKILL.md` again now and follow the new version from the step after this one
+(do not refresh twice), and tell the builder in one line that their course skills were updated.
+`UPDATED` with other skills only: tell them in one line and go on. If the script is missing or
+`python3` fails, go on.
+
 ## Steps
 
 1. **Find the one idea.** Write it as one plain sentence ("A pull request is a proposed change

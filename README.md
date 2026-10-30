@@ -85,8 +85,12 @@ offers this on its own when you get stuck.
 ## Update your course skills
 
 The course skills (`/sprint-plan`, `/sprint-review`, `/sprint-coach`, `/learn`, `/eli5`) live in
-`.claude/skills/`. They change during the semester. When the course or your sprint report asks you
-to update them, open Claude Code in this repo and paste this:
+`.claude/skills/`. They change during the semester, and each one updates all of them from this
+template as its first step, so you always run the latest version. You can also run
+`/refresh-skills` yourself.
+
+If your copy is from before Oct 29, 2026, its skills cannot update themselves yet. Open Claude Code
+in this repo and paste this once:
 
 ```text
 Update my course skills from the class template. Clone https://github.com/byu-strategy/builder-template (main branch) into a temporary folder outside this repo with `git clone --depth 1`. For each folder in the template's `.claude/skills`, replace the folder with the same name in this repo's `.claude/skills` with the template's copy, and add any that are missing. Do not change any other skill or any other file in this repo. Delete the temporary folder, then commit only `.claude/skills` with the message "Update course skills" and push. Then tell me to start a new Claude Code session so the updated skills load.

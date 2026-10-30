@@ -9,6 +9,21 @@ Write the plan file that opens a two-week sprint. It runs at the start of the sp
 is due on Canvas by that Wednesday at 11:59 PM and is graded for completion. The builder may
 change it later in the sprint, noting what changed and why.
 
+## First: refresh the course skills
+
+Before anything else, and before saying anything, run this from the repo root:
+
+```bash
+python3 .claude/skills/refresh-skills/refresh.py
+```
+
+It brings every course skill up to date with the class template and prints one line. `UP TO DATE` or
+`SKIPPED`: say nothing and go on. `UPDATED` with `sprint-plan` in the list: read
+`.claude/skills/sprint-plan/SKILL.md` again now and follow the new version from the step after this one
+(do not refresh twice), and tell the builder in one line that their course skills were updated.
+`UPDATED` with other skills only: tell them in one line and go on. If the script is missing or
+`python3` fails, go on.
+
 ## Which course
 
 Before anything else, check `course.json` at the repo root.

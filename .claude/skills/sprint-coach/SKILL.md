@@ -13,6 +13,21 @@ usually exists already; this session updates it rather than starting over.
 what to do about them, is the builder's call. Your job is to make each finding clear, ask what
 they make of it, and help them act on what they choose.
 
+## First: refresh the course skills
+
+Before anything else, and before saying anything, run this from the repo root:
+
+```bash
+python3 .claude/skills/refresh-skills/refresh.py
+```
+
+It brings every course skill up to date with the class template and prints one line. `UP TO DATE` or
+`SKIPPED`: say nothing and go on. `UPDATED` with `sprint-coach` in the list: read
+`.claude/skills/sprint-coach/SKILL.md` again now and follow the new version from the step after this one
+(do not refresh twice), and tell the builder in one line that their course skills were updated.
+`UPDATED` with other skills only: tell them in one line and go on. If the script is missing or
+`python3` fails, go on.
+
 ## What you start with
 
 The builder pastes a prompt copied from their report. It has these parts:
